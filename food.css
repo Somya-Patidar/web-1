@@ -1,0 +1,219 @@
+/* css reset */
+*{
+    margin:0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* CSS VARIABLE */
+:root{
+    --navbar-height:59px;
+}
+/* NAVIGATION BAR */
+#navbar{
+    position: fixed;                           /* [to get correct size of navbar]*/
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-family: 'Dhurjati', sans-serif;
+}
+
+#navbar::before{
+    content: "";
+
+    background-color: rgb(13, 11, 11);                /*  [ set top&left as 0px in both navbar &home before and then adjust height] */         
+    position:absolute;                              /* WHY !!!!*/
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;                /*  [to put the content on top]*/
+    opacity: 0.9;
+}
+
+/* NAVIGATION BAR:LOGO and IMG */
+
+#logo{
+    margin: 3px -16px;
+}
+#logo img{
+   
+    height: 60px;
+    margin: 10px 30px;
+}
+
+/* NAVIGATION BAR:LIST STYLING */
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{
+    
+    list-style: none;
+    font-size: 1.2rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;          /*[kyuki padding deni hai to display block kro] */
+    padding: 2px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color:white ;
+}
+
+/* #HOME SECTON */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 540px;
+    align-items: center;
+    justify-content: center;
+}
+#home::before{
+    content: "";
+    background:url("https://media.istockphoto.com/id/995420048/photo/fresh-ingredients-for-cooking.jpg?s=612x612&w=0&k=20&c=6vMD0MrsXB6fGZo4j_CQvJ5beWZRDvzjJy0uxUHMuas=")no-repeat center center/cover;
+    position:absolute;                              /* WHY !!!!*/
+    top: 0px;
+    left: 0px;
+    height: 579px;
+    width:100%;
+    z-index: -1;                /*  [to put the content on top]*/
+    
+}
+#home h1{
+    color: white;
+}
+
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Dhurjati', sans-serif;
+}
+/* SERVICE SECTION */
+#services{
+    margin: 15px;
+    display: flex;
+}
+/* #service-container h1{
+    font-family: 'Bree Serif';font-size: 22px; ;
+} */
+.box img{
+    display: block;            /*[to make it to center and use margin auto also give some width/height]*/
+    margin: auto;
+    height: 150px;
+    
+}
+.box p{
+    font-family:  'Dhurjati', sans-serif;;
+    font-size: 0.94rem;
+}
+.box{
+    border: 2px solid red;
+    padding: 8px;
+    margin: 10px 7px;
+    border-radius: 10px;
+    background-color:#ebebeb;;
+}
+/* CLIENT SECTION */
+#client-section{
+    height: 390px;
+}
+#client{                                 
+    display: flex;
+    justify-content: center;                     /* [ek img k liye krr lee fir dusri img add krr dena ctrl+D]*/
+    align-items: center;
+}
+.client-item{
+    padding: 5px;
+}
+#client img{                       
+    height: 300px;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('https://media.istockphoto.com/id/1224208111/photo/fresh-vegetables-fruits-microgreens-and-herbs-for-cooking-healthy-meals-at-home.jpg?s=612x612&w=0&k=20&c=fAAY6ChHAyuTNVsWD9PtiZ7VF9Zr-OxllcoGgeMCwNY=')no-repeat center center/cover;
+    width: 100%;
+    height:420px;
+    z-index: -1;
+    opacity: 0.299;
+}
+
+/* CONTACT DETAILS */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;         /* [tabhi photo aayegi piche shi jagah utni hi jagah legi jitni leni hai]*/
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background:url('https://cdn.pixabay.com/photo/2019/05/10/13/28/contact-us-4193523_640.jpg')no-repeat center center/cover;
+    opacity: 0.8;
+}
+#contact-box{
+    display: flex;                     /*[tabhi center mai aayega, movement tabhi possible hai]*/
+    align-items:center; 
+    justify-content: center;
+    padding-bottom: 50px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+ 
+ }
+
+/* FOOTER */
+footer{
+    color: white;
+    background-color: black;
+    padding: 4px 20px;
+}
+
+
+/* UTILITY CLASSES */                        /*[to avoid repititive work]*/
+.h-primary{
+    font-size: 3.8rem;
+    padding: 18px;
+    font-family: 'Bree Serif';
+}
+.h-secondary{
+    font-size: 2.8rem;
+    padding: 18px;
+    font-family: 'Bree Serif';
+}
+.btn{
+    border: 2px solid white;
+    padding: 6px 20px;
+    background-color:#5f2a2a;
+    color: aliceblue;
+    margin: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Dhurjati', sans-serif;
+}
+.btn:hover{
+    background-color:#450000;
+    border-color: black;
+}
+.center{
+    text-align: center;
+}
+
